@@ -17,15 +17,20 @@ app.on('window-all-closed', function() {
   }
 });
 
+function openNewWindow(){
+  mainWindow = new BrowserWindow({width: 1280, height: 600});
+  // and load the index.html of the app.
+  mainWindow.loadUrl('https://app.asana.com/');
+}
+
+app.on('activate-with-no-open-windows', openNewWindow);
+
 // This method will be called when Electron has finished
 // initialization and is ready to create browser windows.
 app.on('ready', function() {
   // Create the browser window.
-  mainWindow = new BrowserWindow({width: 1280, height: 600});
 
-  // and load the index.html of the app.
-  mainWindow.loadUrl('https://app.asana.com/');
-
+  openNewWindow()
   // Open the DevTools.
   //mainWindow.openDevTools();
 
