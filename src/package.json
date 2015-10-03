@@ -1,0 +1,17 @@
+{
+  "name": "asana-electron",
+  "version": "1.0.0",
+  "description": "Electron Wrapper for Asana",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Christoph Peter",
+  "license": "MIT",
+  "devDependencies": {
+    "electron-prebuilt": "^0.33.4",
+    "eslint": "^1.6.0",
+    "gulp": "^3.9.0",
+    "gulp-electron": "0.0.9"
+  }
+}
